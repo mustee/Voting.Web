@@ -1,0 +1,286 @@
+﻿body {
+    background-color: #e7ebee;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: #515151;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.cls-container {
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    -moz-min-width: 290px;
+    -ms-min-width: 290px;
+    -o-min-width: 290px;
+    -webkit-min-width: 290px;
+    min-width: 290px;
+    overflow: hidden;
+    background-color: #e7ebee;
+    color: #fff;
+    text-align: center;
+    visibility: visible;
+    -ms-opacity: 1;
+    opacity: 1;
+    padding: 0;
+}
+
+.login, .register, .registerconfirm, .phone, .vote, .forgotpassword, .setpassword{
+    background-color:#43525A;
+}
+
+.login .cls-content, .register .cls-content, .registerconfirm .cls-content, .phone .cls-content, .vote .cls-content, .forgotpassword .cls-content, .setpassword .cls-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;      
+    }
+
+    .login .cls-content {
+        margin-left: -175px;
+        margin-top: -210px;
+    }
+
+    .register .cls-content {
+        margin-left: -175px;
+        margin-top: -276px;
+    }
+
+    .registerconfirm .cls-content {
+        margin-left: -175px;
+        margin-top: -158.5px;
+    }
+
+    .phone .cls-content {
+        margin-left: -175px;
+        margin-top: -170px;
+    }
+
+    .vote .cls-content {
+        margin-left: -175px;
+        margin-top: -170px;
+    }
+
+    .forgotpassword .cls-content {
+        margin-left: -175px;
+        margin-top: -170px;
+    }
+
+     .setpassword .cls-content {
+        margin-left: -175px;
+        margin-top: -170px;
+    }
+    .registerconfirm .row {
+        margin-top: 30px;
+    }
+
+.cls-content .cls-content-sm {
+    color: #515151;
+    width: 350px;
+    -moz-min-width: 270px;
+    -ms-min-width: 270px;
+    -o-min-width: 270px;
+    -webkit-min-width: 270px;
+    min-width: 270px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.panel {
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+    -ms-box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+}
+
+.pad {
+    padding-bottom: 15px;
+}
+
+.input-group-addon {
+    border: 1px solid #e1e5ea;
+    background-color: transparent;
+    border-radius: 0;
+    min-width: 45px;
+}
+
+.form-control {
+    font-size: 12px;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #e9e9e9;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.panel-body {
+    padding: 25px 20px;
+}
+
+    .panel-body .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+[class^="col-"]:not(.pad-no) {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.form-text.form-checkbox:not(.btn), .form-text.form-radio:not(.btn) {
+    padding-left: 25px;
+}
+
+.form-checkbox:not(.btn), .form-radio:not(.btn) {
+    display: inline-block;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    padding: 3px;
+    line-height: 1em;
+    min-width: 19px;
+    margin: 0;
+}
+
+.form-checkbox > input[type="checkbox"], .form-radio > input[type="radio"] {
+    margin-left: -50px;
+    -ms-opacity: 0;
+    opacity: 0;
+    position: absolute !important;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.form-checkbox.form-icon:after, .form-radio.form-icon:after {
+    content: "\f096";
+    color: inherit;
+    font-size: 19px;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    left: .1em;
+    top: 50%;
+    margin-top: -0.44em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.form-checkbox.active.form-icon:after {
+    content: "\f046";
+}
+
+.btn-success, .btn-success:focus, .btn-hover-success:hover, .btn-hover-success:active, .btn-hover-success.active, .btn.btn-active-success:active, .btn.btn-active-success.active, .dropdown.open > .btn.btn-active-success, .btn-group.open .dropdown-toggle.btn.btn-active-success {
+    background-color: #97c664;
+    border-color: #9cc96b;
+    color: #fff;
+}
+
+.btn-primary, .btn-primary:focus, .btn-hover-primary:hover, .btn-hover-primary:active, .btn-hover-primary.active, .btn.btn-active-primary:active, .btn.btn-active-primary.active, .dropdown.open>.btn.btn-active-primary, .btn-group.open .dropdown-toggle.btn.btn-active-primary {
+  background-color: #579ddb;
+  border-color: #5fa2dd;
+  color: #fff;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 6px 12px;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 1.42857;
+    vertical-align: middle;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -o-transition: all .25s;
+    -ms-transition: all .25s;
+    transition: all .25s;
+}
+
+.pad-ver {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.btn-link {
+    border-color: transparent;
+    color:#fff;
+}
+
+    .btn-link:hover {
+        color:#fff;
+    }
+
+.mar-rgt {
+    margin-right: 15px;
+}
+
+.social{
+    margin-bottom: 15px;
+}
+
+    .social button {
+        width: 100%;
+        text-transform: none;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+.btn-facebook {
+    background-color: #3b5998 !important;
+    border-color: #2f477b !important;
+}
+
+.btn-facebook:hover {
+    background-color: #2f477b!important;
+    border-color: #263963!important;
+}
+
+.btn-twitter {
+  background-color: #00aced!important;
+  border-color: #0098d1!important;
+}
+
+.btn-twitter:hover {
+    background-color: #0098d1!important;
+    border-color: #0283b4!important;
+}
+
+#loading-bar .bar {
+  background: #2ecc71;
+  height: 2px;
+}
+
+#loading-bar .peg {
+  -moz-box-shadow: #2ecc71 1px 0 6px 1px;
+  -ms-box-shadow: #2ecc71 1px 0 6px 1px;
+  -webkit-box-shadow: #2ecc71 1px 0 6px 1px;
+  box-shadow: #2ecc71 1px 0 6px 1px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0;
+}
+
+.vote .pad {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.vote .form-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+[ng-click], [data-ng-click], [x-ng-click] {
+    cursor: pointer;
+}

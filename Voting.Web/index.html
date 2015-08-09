@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="css/voting.css" rel="stylesheet" />
+</head>
+<body ng-app="votingApp" ng-view>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0/angular-sanitize.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.min.js"></script>
+    <script src="lib/loading-bar/loading-bar.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular-local-storage/angular-local-storage.min.js"></script>
+    <script src="lib/angular-facebook/angular-facebook.js"></script>
+    <script src="scripts/app/app.module.js"></script>
+    <script src="scripts/app/app.route.js"></script>
+    <script src="scripts/app/controllers/accounts/LoginController.js"></script>
+    <script src="scripts/app/controllers/accounts/RegisterController.js"></script>
+    <script src="scripts/app/controllers/accounts/PhoneController.js"></script>
+    <script src="scripts/app/controllers/accounts/RegisterConfirmController.js"></script>
+    <script src="scripts/app/controllers/accounts/ConfirmController.js"></script>
+    <script src="scripts/app/controllers/accounts/ForgotPasswordController.js"></script>
+    <script src="scripts/app/controllers/accounts/SetPasswordController.js"></script>
+    <script src="scripts/app/controllers/vote/VoteController.js"></script>
+    <script src="scripts/app/services/AccountService.js"></script>
+    <script src="scripts/app/services/StaticMessagesService.js"></script>
+    <script src="scripts/app/services/SharedDataService.js"></script>
+    <script src="scripts/app/services/TokenService.js"></script>
+    <script src="scripts/app/services/AuthInterceptor.js"></script>
+    <script src="scripts/app/services/CountryService.js"></script>
+    <script src="scripts/app/services/VoteService.js"></script>
+    <script src="scripts/app/models/Login.js"></script>
+    <script src="scripts/app/models/AuthType.js"></script>
+    <script src="scripts/app/models/results/Result.js"></script>
+    <script src="scripts/app/models/results/ResultCode.js"></script>
+    <script src="scripts/app/models/Register.js"></script>
+    <script src="scripts/app/models/Confirm.js"></script>
+    <script src="scripts/app/models/Token.js"></script>
+    <script src="scripts/app/models/Phone.js"></script>
+    <script src="scripts/app/models/Candidate.js"></script>
+    <script src="scripts/app/models/ForgotPassword.js"></script>
+    <script src="scripts/app/models/SetPassword.js"></script>
+</body>
+</html>

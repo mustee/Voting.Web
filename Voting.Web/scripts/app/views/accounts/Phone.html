@@ -1,0 +1,38 @@
+﻿<div class="cls-container phone">
+    <div class="alert alert-danger" role="alert" ng-show="message != null">
+        <span ng-bind="message"></span>
+    </div>
+
+    <div class="cls-content">
+        <div class="cls-content-sm panel">
+            <div class="panel-body">
+                <p class="pad">Enter phone number</p>
+                <form ng-submit="vm.registerPhoneNumber()">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-circle"></i></div>
+                            <select class="form-control" ng-disabled="confirmCode" ng-model="country"
+                                    ng-options="country.Id as country.Name for country in countries">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-mobile-phone"></i></div>
+                            <input type="text" class="form-control" placeholder="Phone Number" ng-disabled="confirmCode" ng-model="phoneNumber" >
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-show="confirmCode">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-check"></i></div>
+                            <input type="text" class="form-control" placeholder="Code" ng-model="phoneNumberConfirmationCode" >
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success text-uppercase" type="submit" style="width:100%">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

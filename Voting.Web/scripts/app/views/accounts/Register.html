@@ -1,0 +1,78 @@
+﻿<div class="cls-container register">
+    <div class="alert alert-danger" role="alert" ng-show="message != null">
+        <span ng-bind="message"></span>
+    </div>
+  
+    <div class="cls-content">
+        <div class="cls-content-sm panel">
+            <div class="panel-body">
+                <p class="pad">Create an account</p>
+                <div class="social">
+                    <button class="btn btn-primary btn-facebook" ng-click="vm.registerWithFacebook()">
+                        <i class="fa fa-facebook"></i>
+                        facebook
+                    </button>
+                    <button class="btn btn-primary btn-twitter">
+                        <i class="fa fa-twitter"></i>
+                        twitter
+                    </button>
+                </div>
+                <div class="row" style="margin-bottom: 15px">
+                    <div class="col-xs-12">
+                        <p class="social-text">Or login with</p>
+                    </div>
+                </div>
+                <form ng-submit="vm.registerUser()">     
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                            <input type="text" class="form-control" placeholder="First Name" ng-model="register.firstName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                            <input type="text" class="form-control" placeholder="Middle Name" ng-model="register.middleName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                            <input type="text" class="form-control" placeholder="Last Name" ng-model="register.lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                            <input type="text" class="form-control" placeholder="Email Address" ng-model="register.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                            <input type="password" class="form-control" placeholder="Password" ng-model="register.password">
+                        </div>
+                    </div>                  
+
+                    <div class="row">
+                        <div class="col-xs-8 text-left checkbox">
+                            <label class="form-checkbox form-icon form-text" ng-class="{'active':register.accepted}">
+                                <input type="checkbox" ng-model="register.accepted"> Agree to licence
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="form-group text-right">
+                                <button class="btn btn-success text-uppercase" type="submit">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="pad-ver">
+            Already have an account ?
+            <a href="#login" class="btn-link mar-rgt">Sign In</a>
+        </div>
+    </div>
+</div>

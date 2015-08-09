@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{C948424C-A235-481C-9CEB-B7BE76ABF71C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\voting.css" />
+    <Content Include="gulpfile.config.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index.html" />
+    <Content Include="lib\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="lib\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="lib\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="lib\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="lib\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="lib\angular-facebook\angular-facebook.js" />
+    <Content Include="lib\angular-local-storage\angular-local-storage.js" />
+    <Content Include="lib\angular-local-storage\angular-local-storage.min.js" />
+    <Content Include="lib\angular-route\angular-route.js" />
+    <Content Include="lib\angular-route\angular-route.min.js" />
+    <Content Include="lib\angular\angular-animate.js" />
+    <Content Include="lib\angular\angular-animate.min.js" />
+    <Content Include="lib\angular\angular.js" />
+    <Content Include="lib\angular\angular.min.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap\js\npm.js" />
+    <Content Include="lib\font-awesome\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="lib\jquery\jquery.js" />
+    <Content Include="lib\jquery\jquery.min.js" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\ForgotPasswordController.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\PhoneController.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\RegisterConfirmController.ts" />
+    <Content Include="lib\loading-bar\loading-bar.js" />
+    <Content Include="scripts\app\views\accounts\Confirm.html" />
+    <Content Include="scripts\app\views\accounts\Login.html" />
+    <Content Include="scripts\app\views\accounts\Phone.html" />
+    <Content Include="scripts\app\views\accounts\Register.html" />
+    <Content Include="scripts\app\views\accounts\RegisterConfirm.html" />
+    <Content Include="scripts\app\views\accounts\SetPassword.html" />
+    <Content Include="scripts\app\views\vote\Vote.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="lib\angular\angular.min.js.map" />
+    <Content Include="lib\angular-route\angular-route.min.js.map" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\font-awesome\css\font-awesome.css.map" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lib\jquery\jquery.min.map" />
+    <Content Include="lib\angular\angular-animate.min.js.map" />
+    <None Include="ptvoting - FTP.pubxml" />
+    <None Include="ptvoting - Web Deploy.pubxml" />
+    <None Include="ptvotingweb.pubxml" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\app\app.module.ts" />
+    <TypeScriptCompile Include="scripts\app\app.route.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\ConfirmController.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\LoginController.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\RegisterController.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\IConfirmRouteParams.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\IForgotPasswordScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\ILoginScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\IPhoneScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\IRegisterConfirmScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\IRegisterScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\ISetPasswordRouteParams.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\scope\ISetPasswordScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\accounts\SetPasswordController.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\vote\scope\IVoteScope.ts" />
+    <TypeScriptCompile Include="scripts\app\controllers\vote\VoteController.ts" />
+    <TypeScriptCompile Include="scripts\app\models\AuthType.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Candidate.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Confirm.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Country.ts" />
+    <TypeScriptCompile Include="scripts\app\models\ForgotPassword.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Login.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Phone.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Position.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Register.ts" />
+    <TypeScriptCompile Include="scripts\app\models\results\ItemResult.ts" />
+    <TypeScriptCompile Include="scripts\app\models\results\ListResult.ts" />
+    <TypeScriptCompile Include="scripts\app\models\results\LoginResult.ts" />
+    <TypeScriptCompile Include="scripts\app\models\results\Result.ts" />
+    <TypeScriptCompile Include="scripts\app\models\results\ResultCode.ts" />
+    <TypeScriptCompile Include="scripts\app\models\SetPassword.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Token.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Vote.ts" />
+    <TypeScriptCompile Include="scripts\app\services\AccountService.ts" />
+    <TypeScriptCompile Include="scripts\app\services\AuthInterceptor.ts" />
+    <TypeScriptCompile Include="scripts\app\services\CountryService.ts" />
+    <TypeScriptCompile Include="scripts\app\services\SharedDataService.ts" />
+    <TypeScriptCompile Include="scripts\app\services\StaticMessagesService.ts" />
+    <TypeScriptCompile Include="scripts\app\services\TokenService.ts" />
+    <TypeScriptCompile Include="scripts\app\services\VoteService.ts" />
+    <TypeScriptCompile Include="scripts\app\tsd.d.ts" />
+    <Content Include="scripts\app\views\accounts\ForgotPassword.html" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular-local-storage\angularLocalStorage.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-animate.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-resource.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-route.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-scenario.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular-ui-router.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-angular\angular.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-fbsdk\fbsdk.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\dt-jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="scripts\tools\typings\voting.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Voting.Web</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50524</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50524/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
