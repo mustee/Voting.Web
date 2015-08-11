@@ -63,6 +63,7 @@
     <Content Include="scripts\app\views\accounts\Register.html" />
     <Content Include="scripts\app\views\accounts\RegisterConfirm.html" />
     <Content Include="scripts\app\views\accounts\SetPassword.html" />
+    <Content Include="scripts\app\views\vote\Results.html" />
     <Content Include="scripts\app\views\vote\Vote.html" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -124,6 +125,7 @@
     <TypeScriptCompile Include="scripts\app\models\results\LoginResult.ts" />
     <TypeScriptCompile Include="scripts\app\models\results\Result.ts" />
     <TypeScriptCompile Include="scripts\app\models\results\ResultCode.ts" />
+    <TypeScriptCompile Include="scripts\app\models\Role.ts" />
     <TypeScriptCompile Include="scripts\app\models\SetPassword.ts" />
     <TypeScriptCompile Include="scripts\app\models\Token.ts" />
     <TypeScriptCompile Include="scripts\app\models\Vote.ts" />

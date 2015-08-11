@@ -49,6 +49,11 @@ var Voting;
                 controllerAs: 'vm',
                 templateUrl: viewBase + "vote/Vote.html"
             })
+                .when('/results', {
+                controller: Voting.Controllers.Vote.ResultsController,
+                controllerAs: 'vm',
+                templateUrl: viewBase + "vote/Results.html"
+            })
                 .otherwise({ redirectTo: '/login' });
         };
         return Routes;

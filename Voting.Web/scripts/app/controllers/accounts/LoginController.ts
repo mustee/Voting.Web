@@ -73,7 +73,7 @@ module Voting.Controllers.Accounts {
                     return;
                 }
 
-                self.tokenService.setToken(result.access_token);
+                self.tokenService.setToken(result.access_token, +result.role);
                 self.$location.path('/vote');
             });     
         }
@@ -85,7 +85,7 @@ module Voting.Controllers.Accounts {
                     console.log(user);
                     self.accountService.login(new Models.Login(<string>Models.AuthType.FACEBOOK.toString(), user.id))
                         .then(loginResult => {
-                            if (loginResult.status == 400) {
+                        if (loginResult.status == 400 || loginResult.error === 'invalid_grant') {
                                 self.sharedDataService.registerInfoConfirm = new Models.Register(user.first_name,
                                     user.last_name, user.middle_name, null, user.email, Models.AuthType.FACEBOOK, user.id);
                                 self.$location.path('/registerconfirm');                     
@@ -93,7 +93,7 @@ module Voting.Controllers.Accounts {
                                 self.sharedDataService.tempLoginResult = loginResult;
                                 self.$location.path('/phone');
                             } else {
-                                self.tokenService.setToken(loginResult.access_token);
+                                self.tokenService.setToken(loginResult.access_token, +loginResult.role);
                                 self.$location.path('/vote');
                             }
                         });

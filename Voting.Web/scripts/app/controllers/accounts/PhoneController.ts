@@ -47,7 +47,7 @@ module Voting.Controllers.Accounts {
                 }
 
                 if (self.$scope.confirmCode) {
-                    self.tokenService.setToken(self.sharedDataService.tempLoginResult.access_token);
+                    self.tokenService.setToken(self.sharedDataService.tempLoginResult.access_token, +self.sharedDataService.tempLoginResult.role);
                     self.$location.path('/vote');
                     return;
                 }

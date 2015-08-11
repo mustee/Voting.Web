@@ -6,8 +6,8 @@ var Voting;
     (function (Controllers) {
         var Vote;
         (function (Vote) {
-            var VoteController = (function () {
-                function VoteController($scope, $location, voteService, tokenService) {
+            var ResultsController = (function () {
+                function ResultsController($scope, $location, voteService, tokenService) {
                     this.$scope = $scope;
                     this.$location = $location;
                     this.voteService = voteService;
@@ -28,7 +28,7 @@ var Voting;
                         self.loadData();
                     });
                 }
-                VoteController.prototype.voteChecked = function ($event) {
+                ResultsController.prototype.voteChecked = function ($event) {
                     var self = this;
                     var value = +$event.currentTarget.value;
                     if (self.currentVote != null) {
@@ -45,12 +45,8 @@ var Voting;
                         }
                     }
                 };
-                VoteController.prototype.nextClicked = function () {
+                ResultsController.prototype.nextClicked = function () {
                     var self = this;
-                    if ((!self.currentVote || self.currentVote == null) && self.selectedCandidate !== -1) {
-                        self.voteService.vote(self.selectedCandidate);
-                        self.selectedCandidate = -1;
-                    }
                     if (self.$scope.current === (self.positions.length - 1)) {
                         return;
                     }
@@ -60,7 +56,7 @@ var Voting;
                     self.$scope.current = self.$scope.current + 1;
                     self.loadData();
                 };
-                VoteController.prototype.previousClicked = function () {
+                ResultsController.prototype.previousClicked = function () {
                     var self = this;
                     self.$scope.current = self.$scope.current - 1;
                     if (self.$scope.current !== (self.positions.length - 1)) {
@@ -68,11 +64,11 @@ var Voting;
                     }
                     self.loadData();
                 };
-                VoteController.prototype.logout = function () {
+                ResultsController.prototype.logout = function () {
                     this.tokenService.setToken(null, 1);
                     this.$location.path('/login');
                 };
-                VoteController.prototype.loadData = function () {
+                ResultsController.prototype.loadData = function () {
                     var self = this;
                     self.$scope.position = self.positions[self.$scope.current].Name;
                     self.voteService.getAllCandidates(self.positions[self.$scope.current].Id).then(function (result) {
@@ -92,12 +88,11 @@ var Voting;
                         });
                     });
                 };
-                VoteController.$inject = ['$scope', '$location', 'Voting.Services.VoteService', 'Voting.Services.TokenService'];
-                return VoteController;
+                ResultsController.$inject = ['$scope', '$location', 'Voting.Services.VoteService', 'Voting.Services.TokenService'];
+                return ResultsController;
             })();
-            Vote.VoteController = VoteController;
-            angular.module('votingApp').controller('Voting.Controllers.Vote.VoteController', VoteController);
+            Vote.ResultsController = ResultsController;
         })(Vote = Controllers.Vote || (Controllers.Vote = {}));
     })(Controllers = Voting.Controllers || (Voting.Controllers = {}));
 })(Voting || (Voting = {}));
-//# sourceMappingURL=VoteController.js.map
+//# sourceMappingURL=ResultsController.js.map

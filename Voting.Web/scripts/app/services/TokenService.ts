@@ -14,7 +14,7 @@ module Voting.Services {
             return this.localStorageService.get('pt_voting_token'); 
         }
 
-        setToken(token: string, role: Models.Role): void {
+        setToken(token: string, role?: Models.Role): void {
             this.localStorageService.set('pt_voting_token', new Models.Token(token, role, new Date(), new Date()));
         }
     }

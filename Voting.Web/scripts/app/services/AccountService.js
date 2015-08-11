@@ -79,7 +79,7 @@ var Voting;
             AccountService.prototype.registerPhoneNumber = function (phone) {
                 var self = this;
                 var deferred = self.$q.defer();
-                self.$http.post(self.apiBaseUrl + 'account/phone', phone)
+                self.$http.post(self.apiBaseUrl + 'account/phone', phone, { headers: { 'Authorization': 'Bearer ' + self.sharedDataService.tempLoginResult.access_token } })
                     .then(function (data) {
                     var result = data.data;
                     deferred.resolve(result);

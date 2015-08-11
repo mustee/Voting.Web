@@ -1,13 +1,13 @@
-﻿<div class="cls-container vote">
+﻿<div class="cls-container results">
     <header class="navbar navbar-static-top" id="top" role="banner">
         <div class="container">
 
             <nav id="vote-navbar" class="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><h5 style="padding-top: 8px;color:#337ab7">Ahmed Mustapha</h5></li>
-                    <li><a ng-href="#vote">Vote</a></li>
-                    <li ng-show="role == 0"><a ng-href="#results">Results</a></li>
-                    <li ng-show="role == 0"><a ng-href="#users">Users</a></li>
+                    <li><a ng-href="">Votes</a></li>
+                    <li ng-show="role == 0"><a ng-href="">Results</a></li>
+                    <li ng-show="role == 0"><a ng-href="">Users</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a ng-click="vm.logout()">Log out</a></li>
@@ -22,11 +22,14 @@
                 <p class="pad"> {{position}} </p>
 
                 <form ng-submit="">
-                    <div class="text-left checkbox" ng-repeat="candidate in candidates">
-                        <label class="form-checkbox form-icon form-text" ng-class="{'active':candidate.selected}">
-                            <input type="checkbox" value="{{candidate.Id}}" ng-click="vm.voteChecked($event)"> {{candidate.Name}}
-                        </label>
-                    </div>
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr ng-repeat="candidate in candidates">
+                                <td class="text-left">{{candidate.Name}}</td> 
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <div class="row" style="margin-top: 20px;">
                         <div class="col-xs-6 text-left">
@@ -39,14 +42,12 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="form-group text-right">
-                                <button class="btn btn-success text-uppercase" ng-click="vm.nextClicked()" ng-bind-html="nextText">
-                                    
-                                </button>
+                                <button class="btn btn-success text-uppercase" ng-click="vm.nextClicked()" ng-bind-html="nextText"></button>
                             </div>
                         </div>
                     </div>
                 </form>
-            </div>  
+            </div>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
 
 module Voting.Controllers.Vote.Scope {
 
-    export interface IVoteScope extends ng.IScope {
+    export interface IResultsScope extends ng.IScope {
 
         candidates: Models.Candidate[];
 

@@ -2,13 +2,14 @@
 /// <reference path="../../../tools/typings/voting.d.ts" />
 
 module Voting.Controllers.Vote {
-    export class VoteController {
-        private positions: Models.Position[];  
-        private currentVote: Models.Vote = null; 
-        private selectedCandidate: number = -1;        
+    export class ResultsController {
+
+        private positions: Models.Position[];
+        private currentVote: Models.Vote = null;
+        private selectedCandidate: number = -1;
 
         static $inject = ['$scope', '$location', 'Voting.Services.VoteService', 'Voting.Services.TokenService'];
-        constructor(private $scope: Scope.IVoteScope,
+        constructor(private $scope: Scope.IResultsScope,
             private $location: ng.ILocationService,
             private voteService: Services.VoteService,
             private tokenService: Services.TokenService) {
@@ -28,9 +29,8 @@ module Voting.Controllers.Vote {
                 self.positions = result.Items;
 
                 self.loadData();
-            });   
+            });
         }
-
 
         voteChecked($event): void {
             var self = this;
@@ -56,11 +56,6 @@ module Voting.Controllers.Vote {
 
         nextClicked(): void {
             var self = this;
-
-            if ((!self.currentVote || self.currentVote == null) && self.selectedCandidate !== -1 ) {
-                self.voteService.vote(self.selectedCandidate);
-                self.selectedCandidate = -1;
-            }
 
             if (self.$scope.current === (self.positions.length - 1)) {
                 return;
@@ -115,8 +110,5 @@ module Voting.Controllers.Vote {
                 });
             });
         }
-
     }
-
-    angular.module('votingApp').controller('Voting.Controllers.Vote.VoteController', VoteController);
 }

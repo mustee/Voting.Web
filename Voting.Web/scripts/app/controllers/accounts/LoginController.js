@@ -64,7 +64,7 @@ var Voting;
                             self.$location.path('/phone');
                             return;
                         }
-                        self.tokenService.setToken(result.access_token);
+                        self.tokenService.setToken(result.access_token, +result.role);
                         self.$location.path('/vote');
                     });
                 };
@@ -75,7 +75,7 @@ var Voting;
                             console.log(user);
                             self.accountService.login(new Voting.Models.Login(Voting.Models.AuthType.FACEBOOK.toString(), user.id))
                                 .then(function (loginResult) {
-                                if (loginResult.status == 400) {
+                                if (loginResult.status == 400 || loginResult.error === 'invalid_grant') {
                                     self.sharedDataService.registerInfoConfirm = new Voting.Models.Register(user.first_name, user.last_name, user.middle_name, null, user.email, Voting.Models.AuthType.FACEBOOK, user.id);
                                     self.$location.path('/registerconfirm');
                                 }
@@ -84,7 +84,7 @@ var Voting;
                                     self.$location.path('/phone');
                                 }
                                 else {
-                                    self.tokenService.setToken(loginResult.access_token);
+                                    self.tokenService.setToken(loginResult.access_token, +loginResult.role);
                                     self.$location.path('/vote');
                                 }
                             });

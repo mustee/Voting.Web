@@ -24,10 +24,6 @@ var Voting;
                         this.$scope.message = this.staticMessagesService.REGISTRATION_UNCOMPLETEDFORM;
                         return;
                     }
-                    if (!this.$scope.register.accepted) {
-                        this.$scope.message = this.staticMessagesService.REGISTRATION_UNACCEPTEDTERMS;
-                        return;
-                    }
                     this.accountService.register(this.$scope.register).then(function (result) {
                         if (result.ResultCode !== Voting.Models.Results.ResultCode.SUCCESS) {
                             _this.$scope.message = result.Description;
@@ -52,7 +48,7 @@ var Voting;
                                     self.$location.path('/phone');
                                 }
                                 else {
-                                    self.tokenService.setToken(loginResult.access_token);
+                                    self.tokenService.setToken(loginResult.access_token, loginResult.role);
                                     self.$location.path('/vote');
                                 }
                             });

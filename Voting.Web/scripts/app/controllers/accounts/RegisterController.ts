@@ -24,11 +24,6 @@ module Voting.Controllers.Accounts {
                 this.$scope.message = this.staticMessagesService.REGISTRATION_UNCOMPLETEDFORM;
                 return;
             }
-
-            if (!this.$scope.register.accepted) {
-                this.$scope.message = this.staticMessagesService.REGISTRATION_UNACCEPTEDTERMS;
-                return;
-            }
             
             this.accountService.register(this.$scope.register).then(result => {
                 if (result.ResultCode !== Models.Results.ResultCode.SUCCESS) {
@@ -54,7 +49,7 @@ module Voting.Controllers.Accounts {
                                 self.sharedDataService.tempLoginResult = loginResult;
                                 self.$location.path('/phone');
                             } else {
-                                self.tokenService.setToken(loginResult.access_token);
+                                self.tokenService.setToken(loginResult.access_token, loginResult.role);
                                 self.$location.path('/vote');
                             }
                         });
